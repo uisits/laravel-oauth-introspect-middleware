@@ -1,3 +1,6 @@
+# Note
+
+> THis package is exact replica of [arietimmerman/laravel-oauth-introspect-middleware](https://github.com/arietimmerman/laravel-oauth-introspect-middleware) with support for Laravel 7.x.
 
 Especially for a microservices architecture, authentication and authorization functions should be delegated. Protecting resources is best done by implementing the web services as a pure OAuth2 resource server, relying on token verification on a remote authorization server.
 
@@ -33,9 +36,9 @@ and add the MiddleWare in your `App/Http/Kernel.php`
 protected $routeMiddleware = [
     // [..]
     'verifyaccesstoken' => \ArieTimmerman\Laravel\OAuth2\VerifyAccessToken::class,
-    // [..]   
+    // [..]
 ];
-~~~  
+~~~
 
 publish the configuration
 
@@ -57,7 +60,7 @@ AUTHORIZATION_SERVER_TOKEN_URL="${AUTHORIZATION_SERVER_URL}/oauth/token"
 # The OAuth2 Introspection endpoint https://tools.ietf.org/html/rfc7662
 AUTHORIZATION_SERVER_INTROSPECT_URL="${AUTHORIZATION_SERVER_URL}/oauth/introspect"
 
-# Optional configuration for requesting an OAuth2 access tokens using the implicit grant flow 
+# Optional configuration for requesting an OAuth2 access tokens using the implicit grant flow
 AUTHORIZATION_SERVER_AUTHORIZATION_URL="${AUTHORIZATION_SERVER_URL}/oauth/authorize"
 AUTHORIZATION_SERVER_REDIRECT_URL=https://my.machine.dom
 ~~~
