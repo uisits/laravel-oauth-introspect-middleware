@@ -39,7 +39,6 @@ class VerifyAccessToken
         $guzzle = $this->getClient();
 
         try {
-            $tries++;
             $response = $guzzle->post(
                 config('authorizationserver.authorization_server_introspect_url'), [
                     'form_params' => [
